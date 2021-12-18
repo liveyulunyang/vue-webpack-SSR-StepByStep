@@ -40,6 +40,7 @@
     "trans97": "^0.1.2",
     "uglifyjs-webpack-plugin": "^2.1.1",
     "vue": "^2.6.6",
+    "vue-meta": "^2.4.0",
     "vue-router": "^3.0.2",
     "vue-server-renderer": "^2.6.6",
     "webpack-merge": "^4.2.1"

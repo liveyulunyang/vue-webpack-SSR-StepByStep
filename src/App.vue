@@ -16,6 +16,10 @@ export default {
     return {
       who: 'Vue and Webpack !!'
     }
+  },
+  metaInfo: {
+    title: 'Default Title',
+    titleTemplate: '%s | My Awesome SSR Webapp'
   }
 };
 </script>

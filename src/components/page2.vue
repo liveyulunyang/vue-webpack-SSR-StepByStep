@@ -1,7 +1,6 @@
 <template>
 	<div id="testComponent">
 		This is {{name}}.
-		
 	</div>
 
 
@@ -12,6 +11,15 @@
 			return{
 				name:"about"
 			}
+		},
+		metaInfo: {
+			title: 'page2',
+			titleTemplate: '%s | My Awesome SSR Webapp',
+			meta: [{
+				vmid: 'description',
+				name: 'description',
+				content: 'my standard description',
+			}]
 		}
 	};
 

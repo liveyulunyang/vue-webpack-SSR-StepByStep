@@ -1,7 +1,6 @@
 <template>
 	<div id="testComponent">
 		I'm a {{name}}.
-
 	</div>
 
 

@@ -1,6 +1,14 @@
 import Vue from 'vue';
 import App from './App.vue';
 import { createRouter } from './router/router.js';
+import Meta from 'vue-meta'
+Vue.use(Meta, {
+  keyName: 'metaInfo',
+  attribute: 'data-vue-meta',
+  ssrAttribute: 'data-vue-meta-server-rendered',
+  tagIDKeyName: 'vmid',
+  refreshOnceOnNavigation: true
+})
 /*
 new Vue({
   el: '#app',

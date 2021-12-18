@@ -14,19 +14,16 @@ const renderer = require('vue-server-renderer').createRenderer({
 server.use('/dist', express.static(path.join(__dirname, './dist')));
 
 //start server
-server.get('/', (req, res) => { 
-    
-  bundle.default({ url: req.url }).then((app) => {    
-    //context to use as data source
-    //in the template for interpolation
-    const context = {
-      title: 'Vue JS - Server Render',
-      meta: `
-        <meta description="vuejs server side render">
-      `
-    };
+server.get('/', (req, res) => {
 
-    renderer.renderToString(app, context, function (err, html) {   
+  bundle.default({ url: req.url }).then((app) => {
+    console.log(context)
+    const context = {
+      title: 'Vue JS - SSR proj',
+      meta: `<meta description="vuejs SSR proj">`
+    }
+
+    renderer.renderToString(app, context, function (err, html) {
       if (err) {
         if (err.code === 404) {
           res.status(404).end('Page not found')
@@ -36,12 +33,12 @@ server.get('/', (req, res) => {
       } else {
         res.end(html)
       }
-    });        
+    })
   }, (err) => {
-    console.log(err);
-    console.log("stop");
-  });  
-});  
+    console.log(err)
+    console.log("stop")
+  })
+})
 
 server.get('/news', function(req, res){
 	res.send("Hello NEWS");
